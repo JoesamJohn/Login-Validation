@@ -1,0 +1,47 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+  <display-name>Archetype Created Web Application</display-name>
+  <filter>
+  	<filter-name>ValidateFilter</filter-name>
+  	<display-name>ValidateFilter</display-name>
+  	<description></description>
+  	<filter-class>com.simplilearn.filter.ValidateFilter</filter-class>
+  </filter>
+  <filter-mapping>
+  	<filter-name>ValidateFilter</filter-name>
+  	<url-pattern>/dashboard</url-pattern>
+  </filter-mapping>
+  <servlet>
+  	<servlet-name>DashboardServlet</servlet-name>
+  	<display-name>DashboardServlet</display-name>
+  	<description></description>
+  	<servlet-class>com.simplilearn.servlets.DashboardServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>LogoutServlet</servlet-name>
+  	<display-name>LogoutServlet</display-name>
+  	<description></description>
+  	<servlet-class>com.simplilearn.servlets.LogoutServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>ErrorServlet</servlet-name>
+  	<display-name>ErrorServlet</display-name>
+  	<description></description>
+  	<servlet-class>com.simplilearn.servlets.ErrorServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>DashboardServlet</servlet-name>
+  	<url-pattern>/dashboard</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>LogoutServlet</servlet-name>
+  	<url-pattern>/logout</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>ErrorServlet</servlet-name>
+  	<url-pattern>/error</url-pattern>
+  </servlet-mapping>
+</web-app>
